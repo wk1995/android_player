@@ -1,0 +1,39 @@
+package com.wk.player.constants
+
+/**
+ * 播放事件参数
+ * 用于[com.wk.player.api.BasePlayerObserver.onPlayEvent] param参数中的key
+ * */
+object PlayEventParamsConstants {
+    const val EVT_UTC_TIME = "EVT_UTC_TIME"
+    const val EVT_BLOCK_DURATION = "EVT_BLOCK_DURATION"
+    const val EVT_TIME = "EVT_TIME"
+    const val EVT_DESCRIPTION = "EVT_MSG"
+    const val EVT_PARAM1 = "EVT_PARAM1"
+    const val EVT_PARAM2 = "EVT_PARAM2"
+    const val EVT_GET_MSG = "EVT_GET_MSG"
+    const val EVT_PLAY_COVER_URL = "EVT_PLAY_COVER_URL"
+    const val EVT_PLAY_URL = "EVT_PLAY_URL"
+    const val EVT_PLAY_NAME = "EVT_PLAY_NAME"
+    const val EVT_PLAY_DESCRIPTION = "EVT_PLAY_DESCRIPTION"
+    const val EVT_PLAY_PROGRESS_MS = "EVT_PLAY_PROGRESS_MS"
+    const val EVT_PLAY_DURATION_MS = "EVT_PLAY_DURATION_MS"
+    const val EVT_PLAY_PROGRESS = "EVT_PLAY_PROGRESS"
+    const val EVT_PLAY_DURATION = "EVT_PLAY_DURATION"
+    const val EVT_PLAYABLE_DURATION_MS = "EVT_PLAYABLE_DURATION_MS"
+    const val EVT_PLAYABLE_RATE = "EVT_PLAYABLE_RATE"
+    const val EVT_USERID = "EVT_USERID"
+    const val EVT_ID = "EVT_ID"
+    const val EVT_REPORT_TOKEN = "EVT_REPORT_TOKEN"
+    const val EVT_STREAM_TYPE = "EVT_STREAM_TYPE"
+    const val EVT_PLAYABLE_DURATION = "EVT_PLAYABLE_DURATION"
+    const val EVT_IMAGESPRIT_WEBVTTURL = "EVT_IMAGESPRIT_WEBVTTURL"
+    const val EVT_IMAGESPRIT_IMAGEURL_LIST = "EVT_IMAGESPRIT_IMAGEURL_LIST"
+    const val EVT_DRM_TYPE = "EVT_DRM_TYPE"
+    const val EVT_CODEC_TYPE = "EVT_CODEC_TYPE"
+    const val EVT_KEY_FRAME_CONTENT_LIST = "EVT_KEY_FRAME_CONTENT_LIST"
+    const val EVT_KEY_FRAME_TIME_LIST = "EVT_KEY_FRAME_TIME_LIST"
+    const val EVT_KEY_SELECT_TRACK_INDEX = "EVT_KEY_SELECT_TRACK_INDEX"
+    const val EVT_KEY_SELECT_TRACK_ERROR_CODE = "EVT_KEY_SELECT_TRACK_ERROR_CODE"
+    const val EVT_KEY_VIDEO_ROTATION = "EVT_KEY_VIDEO_ROTATION"
+}

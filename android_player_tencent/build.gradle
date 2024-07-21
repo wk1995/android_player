@@ -1,0 +1,14 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id("android.plugin.baseBuild")
+}
+
+android {
+    namespace 'com.wk.player.tencent'
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.aar'])
+    implementation project(':android_player_api')
+}
