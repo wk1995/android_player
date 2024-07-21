@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/live_paly_global_play_bg">
+
+        <ImageView
+            android:id="@+id/ivGlobalPlaySwitch"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="23dp"
+            android:paddingBottom="18dp"
+            android:src="@drawable/icon_switch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.yidianling.zj.android.view.RoundImageView
+            android:id="@+id/ivGlobalPlayImgDetail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            app:pa_type="pa_round"
+            app:pa_borderRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivGlobalPlaySwitch"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/live_global_play_state_bg"
+            app:layout_constraintTop_toTopOf="@id/ivGlobalPlayImgDetail"
+            app:layout_constraintStart_toStartOf="@id/ivGlobalPlayImgDetail"
+            app:layout_constraintEnd_toEndOf="@id/ivGlobalPlayImgDetail"
+            app:layout_constraintBottom_toBottomOf="@id/ivGlobalPlayImgDetail"/>
+        <TextView
+            android:id="@+id/tvGlobalPlayState"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:paddingHorizontal="4dp"
+            android:text="正在直播"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivGlobalPlaySwitch"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/brGlobalPlayTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="start"
+            app:constraint_referenced_ids="sbGlobalPlayProcess,glGlobalPlayTitle"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glGlobalPlayTitle"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_end="27dp"/>
+        <io.feeeei.circleseekbar.CircleSeekBar
+            android:id="@+id/sbGlobalPlayProcess"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="27dp"
+            android:padding="12dp"
+            app:wheel_can_touch="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:wheel_reached_color="#FFFFFF"
+            app:wheel_reached_width="2dp"
+            app:wheel_unreached_color="#33FFFFFF"
+            app:wheel_unreached_width="2dp" />
+
+        <ImageView
+            android:id="@+id/ivGlobalPlayState"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:src="@drawable/live_paly_pause"
+            app:layout_constraintBottom_toBottomOf="@id/sbGlobalPlayProcess"
+            app:layout_constraintEnd_toEndOf="@id/sbGlobalPlayProcess"
+            app:layout_constraintStart_toStartOf="@id/sbGlobalPlayProcess"
+            app:layout_constraintTop_toTopOf="@id/sbGlobalPlayProcess" />
+
+
+        <TextView
+            android:id="@+id/ivGlobalPlayTitle"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="27dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:maxLines="1"
+            tools:text="直播标题11111111111111111111111322432432423443242343243243241111111"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/brGlobalPlayTitle"
+            app:layout_constraintStart_toEndOf="@id/tvGlobalPlayState"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

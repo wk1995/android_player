@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingDefaultResource">
+
+    <TextView
+        android:id="@+id/tvLiveDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="#242424"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="异常操作提示" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glLiveDialogContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="23dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/brLiveDialogContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="glLiveDialogContent,tvLiveDialogTitle" />
+
+    <TextView
+        android:id="@+id/tvLiveDialogContent"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="22dp"
+        android:gravity="center"
+        android:layout_marginTop="13dp"
+        android:textColor="#666666"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brLiveDialogContent"
+        tools:text="当前账号存在截图、录屏或投屏行为，已自动关闭账号" />
+
+    <Button
+        android:id="@+id/btnLiveDialogOk"
+        android:layout_width="123dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/live_paly_mask_operate_bg"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@id/btnLiveDialogCancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLiveDialogContent"
+        tools:text="我要申诉" />
+
+    <Button
+        android:id="@+id/btnLiveDialogCancel"
+        android:layout_width="123dp"
+        android:layout_height="0dp"
+        android:background="@drawable/live_paly_mask_operate1_bg"
+        android:textColor="#696B6F"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnLiveDialogOk"
+        app:layout_constraintEnd_toStartOf="@id/btnLiveDialogOk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnLiveDialogOk"
+        tools:text="取消" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

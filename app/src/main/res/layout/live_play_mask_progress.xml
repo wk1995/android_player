@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/live_play_mask_bottom_bg"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/ivLivePlay"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="12dp"
+        android:src="@drawable/live_paly_pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLivePlayCurrentProcessTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/ivLivePlay"
+        app:layout_constraintStart_toEndOf="@id/ivLivePlay"
+        app:layout_constraintTop_toTopOf="@id/ivLivePlay"
+        tools:text="12:06" />
+
+    <ImageView
+        android:id="@+id/ivLivePlayFullScreen"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="12dp"
+        android:src="@drawable/live_play_full_screen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLivePlayEndProcessTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/ivLivePlayFullScreen"
+        app:layout_constraintEnd_toStartOf="@id/ivLivePlayFullScreen"
+        app:layout_constraintTop_toTopOf="@id/ivLivePlayFullScreen"
+        tools:text="45:06" />
+
+    <SeekBar
+        android:id="@+id/sbLivePlayProgress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:max="100"
+        android:maxHeight="4dp"
+        android:minHeight="4dp"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp"
+        android:progressDrawable="@drawable/course_video_seek_progress"
+        android:thumb="@drawable/video_seek_thumb"
+        app:layout_constraintBottom_toBottomOf="@id/ivLivePlay"
+        app:layout_constraintEnd_toStartOf="@id/tvLivePlayEndProcessTime"
+        app:layout_constraintStart_toEndOf="@id/tvLivePlayCurrentProcessTime"
+        app:layout_constraintTop_toTopOf="@id/ivLivePlay" />
+</androidx.constraintlayout.widget.ConstraintLayout>
